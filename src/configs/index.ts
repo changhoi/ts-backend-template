@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 
-if (process?.env?.ENV) {
+if (!process.env?.ENV) {
   dotenv.config();
 }
 

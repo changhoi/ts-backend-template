@@ -4,7 +4,7 @@ import dbLoader from "./dbLoader";
 
 const loaders = async (app: Express) => {
   appLoader(app);
-  await dbLoader();
+  // await dbLoader();
 };
 
 export default loaders;

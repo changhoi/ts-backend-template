@@ -1,5 +1,5 @@
-import { Service } from 'typedi';
-import UserModel, { User } from '@/models/userModel';
+import { Service } from "typedi";
+import UserModel, { User } from "@/models/userModel";
 
 @Service()
 class UserService {

@@ -1,6 +1,6 @@
-import User from "./entities/User.entity";
 import { DeepPartial, FindOneOptions } from "typeorm";
 import { QueryDeepPartialEntity } from "typeorm/query-builder/QueryPartialEntity";
+import User from "./entities/User.entity";
 
 class UserModel {
   getAll(): Promise<User[]> {

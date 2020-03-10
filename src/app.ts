@@ -3,6 +3,7 @@ import loaders from "@/loaders";
 
 class App {
   private app: Express;
+
   constructor() {
     this.app = express();
   }
@@ -10,7 +11,7 @@ class App {
   async bootstrap() {
     await loaders(this.app);
     this.app.listen(this.app.get("port"), () => {
-      console.log("Hello World!");
+      console.log(`Server is on ${this.app.get("port")}`);
     });
   }
 }

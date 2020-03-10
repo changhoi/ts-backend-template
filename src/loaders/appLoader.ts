@@ -7,7 +7,7 @@ import routers from "@/routers";
 
 const appLoader = (app: Express) => {
   app.use(helmet());
-  app.set("port", configs.APP.PORT);
+  app.set("port", configs.APP.PORT || 3000);
   app.use(logger(configs.APP.LOGSTAGE));
   app.use(cookieParser(configs.SECRET));
   app.use(express.urlencoded({ extended: true }));
