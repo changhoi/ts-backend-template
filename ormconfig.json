@@ -1,0 +1,9 @@
+{
+  "type": "postgres",
+  "host": "database",
+  "logging": ["error", "warn"],
+  "port": 5432,
+  "username": "postgres",
+  "password": "postgres",
+  "database": "database"
+}

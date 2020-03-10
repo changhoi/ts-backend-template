@@ -1,0 +1,40 @@
+{
+  "name": "deliverypharm-backend-core",
+  "version": "1.0.0",
+  "description": "TS Backend core for deliverypharmacy service",
+  "main": "src/index.ts",
+  "repository": "https://github.com/pilltong-dev/deliverypharm-backend-core.git",
+  "author": "0417kch@naver.com",
+  "license": "private",
+  "private": true,
+  "scripts": {
+    "build:prod": "rimraf ./dist && webpack --env.NODE_ENV=production",
+    "start": "node ./dist/app.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/express": "^4.17.3",
+    "@types/helmet": "^0.0.45",
+    "@types/morgan": "^1.9.0",
+    "@types/node": "^13.9.0",
+    "babel-loader": "^8.0.6",
+    "rimraf": "^3.0.2",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.7",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.3",
+    "http-status-codes": "^1.4.0",
+    "morgan": "^1.9.1",
+    "typedi": "^0.8.0",
+    "typeorm": "^0.2.24"
+  }
+}
