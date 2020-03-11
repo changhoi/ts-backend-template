@@ -1,4 +1,4 @@
-import { ErrorSafety } from "./return.d";
+import { ErrorSafety } from "./return";
 
 declare global {
   interface Mutation<T = any> extends ErrorSafety<T> {}
