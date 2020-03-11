@@ -12,7 +12,6 @@ const appLoader = async (app: Express) => {
   app.use(cookieParser(configs.SECRET));
   app.use(express.urlencoded({ extended: true }));
   app.use(express.json());
-  console.log(configs.NODE_ENV);
 
   if (configs.NODE_ENV === "development") {
     const { default: swaggerUi } = await import("swagger-ui-express");

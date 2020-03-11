@@ -1,12 +1,11 @@
 {
-  "name": "deliverypharm-backend-core",
+  "name": "ts-backend-boilerplate",
   "version": "1.0.0",
-  "description": "TS Backend core for deliverypharmacy service",
+  "description": "Typescript serverside boilerplate",
   "main": "src/index.ts",
-  "repository": "https://github.com/pilltong-dev/deliverypharm-backend-core.git",
   "author": "0417kch@naver.com",
-  "license": "private",
-  "private": true,
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "build:dev": "rimraf ./dist && webpack --env.NODE_ENV=development",
     "build:prod": "rimraf ./dist && webpack --env.NODE_ENV=production",
