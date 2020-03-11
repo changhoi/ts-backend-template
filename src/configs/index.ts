@@ -5,10 +5,12 @@ if (!process.env?.ENV) {
 }
 
 export default {
+  NODE_ENV: String(process.env.NODE_ENV),
   ENV: String(process.env.ENV),
   SECRET: String(process.env.SECRET),
   APP: {
     PORT: Number(process.env.APP_PORT),
-    LOGSTAGE: String(process.env.APP_LOGSTAGE)
+    LOGSTAGE: String(process.env.APP_LOGSTAGE),
+    HOST: String(process.env.APP_HOST)
   }
 };
