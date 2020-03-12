@@ -1,9 +1,12 @@
 {
   "type": "postgres",
-  "host": "database",
-  "logging": ["error", "warn"],
+  "host": "targetHost",
   "port": 5432,
   "username": "postgres",
   "password": "postgres",
-  "database": "database"
+  "database": "database",
+  "migrations": ["src/models/migrations/*.ts"],
+  "cli": {
+    "migrationsDir": "src/models/migrations"
+  }
 }

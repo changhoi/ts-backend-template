@@ -9,7 +9,7 @@ class UserService {
     return this.userModel.getAll();
   }
 
-  createOneUser(username: string): Promise<ServiceData<User>> {
+  signup(username: string): Promise<ServiceData<User>> {
     return this.userModel.createOne({ username });
   }
 }

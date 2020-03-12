@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  test:
+    container_name: test
+    build:
+      context: .
+      dockerfile: Dockerfiles/local.Dockerfile
+    ports:
+      - "3000:80"
+    volumes:
+      - ./:/usr/src/app
+    command: yarn docker:test
+    env_file:
+      - .envs/local.env
+    depends_on:
+      - testdb
+
+  testdb:
+    container_name: testdb
+    image: postgres:10
+    ports:
+      - "5432:5432"
+    volumes:
+      - testdb-volume:/var/lib/postgresql/data
+
+volumes:
+  testdb-volume: {}

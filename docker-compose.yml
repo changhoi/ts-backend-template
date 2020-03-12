@@ -1,0 +1,43 @@
+version: "3.7"
+
+services:
+  app:
+    container_name: app
+    build:
+      context: .
+      dockerfile: Dockerfiles/local.Dockerfile
+    ports:
+      - "3000:80"
+    volumes:
+      - ./:/app
+    env_file:
+      - .envs/local.env
+    depends_on:
+      - database
+      - pgadmin
+
+  database:
+    container_name: database
+    image: postgres:10
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-volume:/var/lib/postgresql/data
+
+  pgadmin:
+    container_name: pg_admin
+    image: dpage/pgadmin4
+    logging:
+      driver: none
+    ports:
+      - "5555:80"
+    volumes:
+      - pg-volume:/var/lib/pgadmin
+    depends_on:
+      - database
+    env_file:
+      - .envs/local.env
+
+volumes:
+  db-volume: {}
+  pg-volume: {}

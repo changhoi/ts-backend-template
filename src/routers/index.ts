@@ -1,6 +1,7 @@
 import { OK } from "http-status-codes";
 import express from "express";
 import { BadRequest } from "@/errors/errRequest";
+import v1 from "./v1";
 
 const router = express.Router();
 
@@ -22,6 +23,6 @@ router.get("/error", (req, res, next) => {
   next(new BadRequest("에러 테스트"));
 });
 
-// router.use("", v1);
+router.use("", v1);
 
 export default router;

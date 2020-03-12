@@ -12,5 +12,11 @@ export default {
     PORT: Number(process.env.APP_PORT),
     LOGSTAGE: String(process.env.APP_LOGSTAGE),
     HOST: String(process.env.APP_HOST)
+  },
+  DB: {
+    HOST: String(process.env.DB_HOST),
+    DATABASE: String(process.env.DB_DATABASE),
+    USERNAME: String(process.env.DB_USERNAME),
+    PASSWORD: String(process.env.DB_PASSWORD)
   }
 };
