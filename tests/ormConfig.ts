@@ -5,7 +5,7 @@ const ormConfig: ConnectionOptions = {
   type: "postgres",
   logging: ["warn", "error", "migration"],
   port: 5432,
-  host: "testdb",
+  host: "localhost",
   database: "testdb",
   username: "postgres",
   password: "postgres",

@@ -16,7 +16,6 @@ describe("UserModel Test", () => {
       const userModel = new UserModel();
       const username = "testUser";
       const ret = await userModel.createOne({ username });
-      if (ret.error) throw ret.error;
 
       expect(ret.success).toBe(true);
       expect(ret.result?.username).toBe(username);

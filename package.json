@@ -8,15 +8,13 @@
   "private": false,
   "scripts": {
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
-    "kill:test": "docker-compose -f docker-compose.test.yml down",
-    "docker:test": "jest --detectOpenHandles --forceExit",
+    "test": "jest --detectOpenHandles --forceExit",
     "docker:dev": "nodemon --exec ts-node -r tsconfig-paths/register src/index.ts",
     "build:dev": "rimraf ./dist && webpack --env.NODE_ENV=development",
     "build:prod": "rimraf ./dist && webpack --env.NODE_ENV=production",
     "dev": "docker-compose up",
     "start": "node ./dist/app.js",
-    "lint": "eslint \"./src/**/*.ts\"",
-    "test": "docker-compose -f docker-compose.test.yml up"
+    "lint": "eslint \"./src/**/*.ts\""
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
@@ -77,6 +75,7 @@
       "js",
       "json"
     ],
+    "collectCoverage": true,
     "globals": {
       "ts-jest": {
         "diagnostics": true
