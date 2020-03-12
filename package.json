@@ -5,7 +5,6 @@
   "main": "src/index.ts",
   "author": "0417kch@naver.com",
   "license": "MIT",
-  "private": false,
   "scripts": {
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "test": "jest --detectOpenHandles --forceExit",
